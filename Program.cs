@@ -1,4 +1,4 @@
-﻿decimal numeroInserido;
+﻿decimal numeroDigitado;
 int quantidade;
 int contador = 0;
 
@@ -14,23 +14,23 @@ while (contador < quantidade)
 {
     contador += 1;
     Console.Write($"Número #{contador}: ");
-    numeroInserido = Convert.ToDecimal(Console.ReadLine());
-    soma = soma + numeroInserido;
+    numeroDigitado = Convert.ToDecimal(Console.ReadLine());
+    soma = soma + numeroDigitado;
 
     if(contador == 1)
     {
-        maiorNumero = numeroInserido;
-        menorNumero = numeroInserido;
+        maiorNumero = numeroDigitado;
+        menorNumero = numeroDigitado;
     }
 
-    if (numeroInserido > maiorNumero)
+    if (numeroDigitado > maiorNumero)
     {
-        maiorNumero = numeroInserido;
+        maiorNumero = numeroDigitado;
     }
 
-    if(numeroInserido < menorNumero)
+    if(numeroDigitado < menorNumero)
     {
-        menorNumero = numeroInserido;
+        menorNumero = numeroDigitado;
     }
 }
 
