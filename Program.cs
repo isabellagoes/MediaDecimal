@@ -6,6 +6,7 @@ decimal soma = 0;
 decimal maiorNumero = 999999.99M;
 decimal menorNumero = 999999.99M;
 
+
 Console.Write("Quantos números: ");
 quantidade = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("");
