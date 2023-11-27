@@ -1,0 +1,45 @@
+﻿decimal numeroInserido;
+int quantidade;
+int contador = 0;
+
+decimal soma = 0;
+decimal maiorNumero = 999999.99M;
+decimal menorNumero = 999999.99M;
+
+Console.Write("Quantos números: ");
+quantidade = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("");
+
+while (contador < quantidade)
+{
+    contador += 1;
+    Console.Write($"Número #{contador}: ");
+    numeroInserido = Convert.ToDecimal(Console.ReadLine());
+    soma = soma + numeroInserido;
+
+    if(contador == 1)
+    {
+        maiorNumero = numeroInserido;
+        menorNumero = numeroInserido;
+    }
+
+    if (numeroInserido > maiorNumero)
+    {
+        maiorNumero = numeroInserido;
+    }
+
+    if(numeroInserido < menorNumero)
+    {
+        menorNumero = numeroInserido;
+    }
+}
+
+if (contador > 0)
+{
+    decimal media = soma / quantidade;
+
+    Console.WriteLine($"\nSoma: {soma:N2}");
+    Console.WriteLine($"Média: {media:N2}");
+    Console.WriteLine($"Maior: {maiorNumero:N2}");
+    Console.WriteLine($"Menor: {menorNumero:N2}");
+}
